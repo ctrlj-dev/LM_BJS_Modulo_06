@@ -94,7 +94,7 @@ var ProductPrice = product => {
 var ProductUnits = product => {
     var productUnits = document.createElement("input");
     productUnits.setAttribute("class", "product-unit");
-    productUnits.setAttribute("id", "product-unit-" + product.description);
+    productUnits.setAttribute("id", "product-unit-" + i);
     productUnits.setAttribute("type", "number");
     productUnits.setAttribute("required", "required");
     productUnits.setAttribute("min", 0)
