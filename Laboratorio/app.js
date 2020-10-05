@@ -103,10 +103,14 @@ var ProductUnits = product => {
     productUnits.addEventListener("change", event => product.units = parseInt(event.target.value));
     productContainer.appendChild(productUnits);
 
+
     var productUnitsMax = parseInt(productUnits.getAttribute('max'));  
 
+    // En esta función hay un bug, y es que desabilita el botón siempre que 
+    // pongamos un 0 en algún input, independiente de que haya otro con
+    // unidades positivas. No consigo resolverlo.
 
-    var checkProductsUnits = () => {   
+    var checkProductsUnits = () => {      
             if(productUnits.value != 0) {
                 buyButton.disabled = false;              
                 if (productUnits.value > productUnitsMax) {       
