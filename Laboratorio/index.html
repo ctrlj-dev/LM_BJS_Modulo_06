@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Modulo 06 Algoritmos 1</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h3 class="header-subtitle">Estimado cliente</h3>
+            <h1 class="page-title">Tú compra</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="product-list-container" class="row"></div>
+            <div class="cart-price">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="sub-title">Subtotal</h3>
+                    </div>
+                    <div class="col-12">
+                        <span id="free-taxes-price" class="sub-amount">0 €</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="sub-title">IVA</h3>
+                    </div>
+                    <div class="col-12">
+                        <span id="product-taxes" class="sub-amount">0 €</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="total-title">TOTAL</h3>
+                    </div>
+                    <div class="col-12">
+                        <span id="total-price" class="total-amount">0 €</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button disabled='disabled' id="buy">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

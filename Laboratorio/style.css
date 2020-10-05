@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    max-width: 100%;
+    height: 100%;  
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin: 0;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    color: black;
+    background-color: #FABB18;  
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+.header-subtitle {
+    font-size: 1rem; 
+    font-weight: 300;
+    margin: 0;
+}
+
+.page-title {  
+    font-size: 2rem;  
+    font-weight: 600;
+    margin: 0;
+}
+
+main {
+    margin: 15px auto;
+    padding: 0 15px;
+}
+
+.product-container {
+    margin: 15px 0;   
+    padding-top: 15px; 
+    background: whitesmoke;
+    box-shadow: 0 1px 3px #c6c6c6;
+}
+
+.product-sup,
+.product-name {
+    display: inline-block;  
+    margin: 0;  
+}
+
+.product-sup {  
+    font-style: italic;
+    color: gray;
+    padding: 0 10px;
+}
+
+.product-price {
+    color: gray;
+    margin-left: 10px;
+}
+
+.product-unit {
+    display: block;
+    width: 100%;
+    border: none;  
+    margin-top: 10px;
+    padding: 0 15px;
+    text-align: right;
+    background:  #FABB18;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+}
+
+.cart-price {
+    margin: 15px auto;
+    text-align: right;
+}
+
+.cart-price .sub-title {
+    font-size: 1rem;
+    color: gray;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.cart-price .sub-amount {
+    font-size: 1.5rem;
+}
+
+.cart-price .total-title {
+    font-size: 2rem;    
+    margin: 0;
+    margin-top: 15px;
+}
+
+.total-amount {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 15px;
+}
+
+button {
+    background: none;
+    border: 2px solid #FABB18;;
+    padding: 5px 15px;
+    margin: 15px 0;    
+    font-family: 'Poppins', sans-serif;
+}
+
+
+footer {
+    padding: 15px 0;
+    background: black;
+    width: 100%;
+}
+
+
