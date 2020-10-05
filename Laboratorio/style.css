@@ -125,10 +125,16 @@ main {
 
 button {
     background: none;
-    border: 2px solid #FABB18;;
+    border: 2px solid #FABB18;
     padding: 5px 15px;
     margin: 15px 0;    
     font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background: #FABB18;
+    border-color: black;
+    cursor: pointer;
 }
 
 

@@ -103,7 +103,8 @@ var ProductUnits = product => {
     productUnits.addEventListener("change", event => product.units = parseInt(event.target.value));
     productContainer.appendChild(productUnits);
 
-    var productUnitsMax = parseInt(productUnits.getAttribute('max'));   
+    var productUnitsMax = parseInt(productUnits.getAttribute('max'));  
+
 
     var checkProductsUnits = () => {   
             if(productUnits.value != 0) {
@@ -118,16 +119,13 @@ var ProductUnits = product => {
 
     productUnits.addEventListener("change", checkProductsUnits)
 
-
 }
 
 
 // Algoritmo para crear el html
 
-function CreateCart(products) {
-    var i = 0;
-    for (product of products) {
-
+function CreateCart(products) {    
+    for (product of products) {        
         productContainer = document.createElement("div");
         productContainer.setAttribute("class", "col-12 product-container");
         main.appendChild(productContainer);
@@ -136,11 +134,6 @@ function CreateCart(products) {
         ProductName(product);
         ProductPrice(product);
         ProductUnits(product);
-
-
-
-
-
     }
 
 }
