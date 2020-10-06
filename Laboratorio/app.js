@@ -68,21 +68,21 @@ var i = 0;
 
 // funciones para crear el html
 
-var ProductNumber = () => {
+var productNumber = () => {
     var productNumber = document.createElement("sup");
     productNumber.setAttribute("class", "product-sup");
     productContainer.appendChild(productNumber);
     productNumber.innerHTML = ++i;
 }
 
-var ProductName = product => {
+var productName = product => {
     var productName = document.createElement("h2");
     productName.setAttribute("class", "product-name");
     productContainer.appendChild(productName);
     productName.innerHTML = product.description;
 }
 
-var ProductPrice = product => {
+var productPrice = product => {
     var productPrice = document.createElement("span");
     productPrice.setAttribute("class", "product-price");
     productContainer.appendChild(productPrice);
@@ -91,7 +91,7 @@ var ProductPrice = product => {
 
 
 
-var ProductUnits = product => {
+var productUnits = product => {
     var productUnits = document.createElement("input");
     productUnits.setAttribute("class", "product-unit");
     productUnits.setAttribute("id", "product-unit-" + i);
@@ -117,7 +117,7 @@ var ProductUnits = product => {
                     productUnits.value = productUnitsMax;
                 }     
             }else if(productUnits.value == 0){
-                buyButton.disabled = 'disabled';
+                buyButton.disabled = 'true';
             }            
     }
 
@@ -128,21 +128,21 @@ var ProductUnits = product => {
 
 // Algoritmo para crear el html
 
-function CreateCart(products) {    
+function createCart(products) {    
     for (product of products) {        
         productContainer = document.createElement("div");
         productContainer.setAttribute("class", "col-12 product-container");
         main.appendChild(productContainer);
 
-        ProductNumber();
-        ProductName(product);
-        ProductPrice(product);
-        ProductUnits(product);
+        productNumber();
+        productName(product);
+        productPrice(product);
+        productUnits(product);
     }
 
 }
 
-CreateCart(products);
+createCart(products);
 
 
 // Variables para el algoritmo que calcular los precios del carrito
@@ -157,34 +157,34 @@ var totalField = document.getElementById("total-price");
 
 // Funciones para calcular precios
 
-var CalculateProductTotalPrice = product => {
+var calculateProductTotalPrice = product => {
     productPrice = product.price * product.units;
     return productPrice;
 }
 
-var CalculateTaxes = product => {
-    taxType += (CalculateProductTotalPrice(product) * product.tax) / 100;
+var calculateTaxes = product => {
+    taxType += (calculateProductTotalPrice(product) * product.tax) / 100;
     return taxType;
 }
 
-var CalculateSubtotal = product => {
-    subtotal = subtotal + CalculateProductTotalPrice(product);
+var calculateSubtotal = product => {
+    subtotal = subtotal + calculateProductTotalPrice(product);
     return subtotal;
 }
 
-var CalculateFinalPrice = () => {
+var calculateFinalPrice = () => {
     finalPrice = subtotal + taxType;
     return finalPrice
 }
 
 // Algoritmo para calcualr precios
 
-function CalculateCartAmount(product) {
+function calculateCartAmount(product) {
 
     for (product of products) {
-        CalculateSubtotal(product);
-        CalculateTaxes(product);
-        CalculateFinalPrice(product);
+        calculateSubtotal(product);
+        calculateTaxes(product);
+        calculateFinalPrice(product);
     }
 
     subTotalField.innerHTML = subtotal.toFixed(2) + ' €';
@@ -194,4 +194,4 @@ function CalculateCartAmount(product) {
 }
 
 
-buyButton.addEventListener("click", () => CalculateCartAmount());
+buyButton.addEventListener("click", () => calculateCartAmount());
